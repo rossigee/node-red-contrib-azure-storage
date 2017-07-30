@@ -1,0 +1,41 @@
+<script type="text/javascript">
+    RED.nodes.registerType('azure-storage-createreadstream', {
+        category: "azure-storage",
+        defaults: {
+            name: { value: "" },
+            storage: { value: "", type: "azure-storage-config" },
+            container: { value: "" },
+            blob: { value: "" },
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "white-globe.png",
+        color: "#a6bbcf",
+        label: function () {
+            return this.name || "Create read stream for Azure blob"
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="azure-storage-createreadstream">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-storage"><i class="icon-bookmark"></i> Azure Storage</label>
+        <input type="text" id="node-input-storage">
+    </div>
+    <div class="form-row">
+        <label for="node-input-container"><i class="icon-folder"></i> Container</label>
+        <input type="text" id="node-input-container">
+    </div>
+    <div class="form-row">
+        <label for="node-input-blob"><i class="icon-folder"></i> Filename</label>
+        <input type="text" id="node-input-blob">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="azure-storage-createreadstream">
+    <p>Calls the '<a href="http://azure.github.io/azure-storage-node/BlobService.html#createReadStream__anchor">CreateReadStream</a>' method and passes the handle on as '<<tt>msg.payload</tt>'.</p>
+</script>

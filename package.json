@@ -18,6 +18,7 @@
     "node-red": {
         "nodes": {
             "azure-storage-config": "azure-storage-config.js",
+            "azure-storage-createreadstream": "createreadstream-node.js",
             "azure-storage-listblobs": "listblobs-node.js",
             "azure-storage-listblobdirectories": "listblobdirectories-node.js",
             "azure-storage-listcontainers": "listcontainers-node.js"
