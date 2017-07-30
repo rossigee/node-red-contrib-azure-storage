@@ -9,16 +9,6 @@ module.exports = function (RED) {
             try {
                 var token = null;
 
-                var storageid = azure_storage_config.storageid;
-                if(msg.storageid !== undefined) {
-                    storageid = msg.storageid;
-                }
-
-                var key = azure_storage_config.key;
-                if(msg.key !== undefined) {
-                    key = msg.key;
-                }
-
                 var container = config.container;
                 if(msg.container !== undefined) {
                     container = msg.container;
@@ -33,7 +23,7 @@ module.exports = function (RED) {
                 var all_entries = [];
                 var page = 0;
 
-                var service = new azure.BlobService(storageid, key);
+                var service = azure_storage_config.getService(msg);
                 var options = {};
                 var _lock = true;
                 var _processpage = function(error, entries, response) {
