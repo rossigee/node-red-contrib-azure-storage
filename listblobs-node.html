@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    RED.nodes.registerType('azure-storage-listblobs', {
+        category: "azure-storage",
+        defaults: {
+            name: { value: "" },
+            storage: { value: "", type: "azure-storage-config" },
+            container: { value: "" },
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "white-globe.png",
+        color: "#a6bbcf",
+        label: function () {
+            return this.name || "List Azure storage blobs"
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="azure-storage-listblobs">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+         <label for="node-input-storage"><i class="icon-database"></i> Azure Storage</label>
+         <input type="text" id="node-input-storage">
+     </div>
+     <div class="form-row">
+          <label for="node-input-container"><i class="icon-folder"></i> Container</label>
+          <input type="text" id="node-input-container">
+      </div>
+</script>
+
+<script type="text/x-red" data-help-name="azure-storage-listblobs">
+    <p>Calls the '<a href="http://azure.github.io/azure-storage-node/BlobService.html#listblobsSegmented__anchor">BlobsSegmented</a>' method, or '<a href="http://azure.github.io/azure-storage-node/BlobService.html#listBlobsSegmentedWithPrefix__anchor">BlobsSegmentedWithPrefix</a>' method if a 'prefix' attribute is supplied/configured.</p>
+</script>

@@ -18,6 +18,7 @@
     "node-red": {
         "nodes": {
             "azure-storage-config": "azure-storage-config.js",
+            "azure-storage-listblobs": "listblobs-node.js",
             "azure-storage-listcontainers": "listcontainers-node.js"
         }
     }
