@@ -14,7 +14,7 @@ Should be fairly self explanatory. Better docs to follow.
 
 See [Microsoft Azure Storage Client Library for node.js](http://azure.github.io/azure-storage-node/index.html) for more information.
 
-For now, I've only implemented nodes useful to our use case, which are to find the latest file in a blob and to obtain a readstream for that file.
+For now, I've only implemented nodes useful to my use case.
 
 ## Note
 
