@@ -15,6 +15,9 @@ module.exports = function (RED) {
                 }
 
                 var prefix = null;
+                if(config.prefix !== undefined) {
+                    prefix = config.prefix;
+                }
                 if(msg.prefix !== undefined) {
                     prefix = msg.prefix;
                 }

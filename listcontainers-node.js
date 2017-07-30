@@ -10,6 +10,9 @@ module.exports = function (RED) {
                 var token = null;
 
                 var prefix = null;
+                if(config.prefix !== undefined) {
+                    prefix = config.prefix;
+                }
                 if(msg.prefix !== undefined) {
                     prefix = msg.prefix;
                 }
