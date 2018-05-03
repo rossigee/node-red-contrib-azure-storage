@@ -4,7 +4,7 @@
     "description": "Azure Storage API client nodes for Node Red",
     "author": "Ross Golder <ross@golder.org>",
     "dependencies": {
-      "azure-storage": "azure-storage"
+      "azure-storage": "*"
     },
     "repository": {
         "type": "git",
